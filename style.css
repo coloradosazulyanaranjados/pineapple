@@ -1,0 +1,41 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+}
+
+.stage {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+}
+
+.movement {
+  position: absolute;
+  animation-duration: all 12s ease;
+  animation-iteration-count: infinite;
+}
+
+#pineapple {
+  animation-name: dropping;
+  animation-duration: 20s;
+  animation-delay: 20s;
+}
+
+@keyframes dropping {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(0, calc(100vh)) scale(1.6);
+  }
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
